@@ -35,10 +35,5 @@
       "npm run lint",
       "npm run prettier"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'pre-commit hook triggered'"
-    }
   }
 }

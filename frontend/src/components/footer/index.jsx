@@ -4,7 +4,7 @@ const CustomFooter = () => {
   return (
     <Footer
       style={{
-        textAlign: 'center',
+        textAlign: "center",
         background: '#001529',
         color: '#f5f5f5',
       }}
@@ -15,10 +15,3 @@ const CustomFooter = () => {
 };
 
 export default CustomFooter;
-
-
-// "husky": {
-//   "hooks": {
-//     "pre-commit": "npx lint-staged"
-//   }
-// }
