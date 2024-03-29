@@ -1,5 +1,5 @@
-import { Content } from "antd/es/layout/layout";
-import { theme } from "antd";
+import { Content } from 'antd/es/layout/layout';
+import { theme } from 'antd';
 
 const MainContent = () => {
   const {
@@ -22,7 +22,7 @@ const MainContent = () => {
         Content
       </div>
     </Content>
-  )
-}
+  );
+};
 
 export default MainContent;

@@ -4,9 +4,11 @@ import { CustomHeader, CustomFooter, MainContent } from './components';
 
 function App() {
   return (
-    <Layout style={{
-      minHeight: '100vh'
-    }}>
+    <Layout
+      style={{
+        minHeight: '100vh',
+      }}
+    >
       <CustomHeader />
       <MainContent />
       <CustomFooter />

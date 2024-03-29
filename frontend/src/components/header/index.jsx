@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { Header } from "antd/es/layout/layout";
-import { Button, Modal } from "antd";
+import { Header } from 'antd/es/layout/layout';
+import { Button, Modal } from 'antd';
 
 const CustomHeader = () => {
   const [open, setOpen] = useState(false);
 
   const showModal = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleCancel = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
   return (
     <Header
       style={{
@@ -21,7 +21,7 @@ const CustomHeader = () => {
         position: 'sticky',
         top: 0,
         zIndex: 1,
-        width: '100%'
+        width: '100%',
       }}
     >
       <div className="demo-logo">
@@ -46,10 +46,10 @@ const CustomHeader = () => {
             key="back"
             onClick={handleCancel}
             style={{
-              backgroundColor: "#cc3406",
+              backgroundColor: '#cc3406',
               border: 'none',
               outline: 'none',
-              color: '#f5f5f5'
+              color: '#f5f5f5',
             }}
           >
             Cancel
@@ -61,19 +61,17 @@ const CustomHeader = () => {
               background: '#001529',
               border: 'none',
               outline: 'none',
-              color: '#f5f5f5'
+              color: '#f5f5f5',
             }}
           >
             Submit
-          </Button>
+          </Button>,
         ]}
       >
-        <p>
-          Add Some Todos
-        </p>
+        <p>Add Some Todos</p>
       </Modal>
     </Header>
-  )
-}
+  );
+};
 
 export default CustomHeader;
