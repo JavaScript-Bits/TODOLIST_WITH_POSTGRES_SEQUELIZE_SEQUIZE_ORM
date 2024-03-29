@@ -1,10 +1,16 @@
-import { Button } from "primereact/button";
+import { Layout } from 'antd';
+
+import { CustomHeader, CustomFooter, MainContent } from './components';
 
 function App() {
   return (
-    <>
-      <Button>New West</Button>
-    </>
+    <Layout style={{
+      minHeight: '100vh'
+    }}>
+      <CustomHeader />
+      <MainContent />
+      <CustomFooter />
+    </Layout>
   );
 }
 
