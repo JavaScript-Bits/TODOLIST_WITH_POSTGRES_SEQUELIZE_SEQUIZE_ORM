@@ -31,8 +31,14 @@
     "vite": "^5.2.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,css,md}": "npx prettier --write ."
+    "*.{js,jsx}": [
+      "npm run lint",
+      "npm run prettier"
+    ]
   },
-  "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
