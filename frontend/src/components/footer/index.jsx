@@ -9,7 +9,7 @@ const CustomFooter = () => {
         color: '#f5f5f5',
       }}
     >
-      New West ©{new Date().getFullYear()} Created by JSBits
+      JS Bits-Todos ©{new Date().getFullYear()} Created by JSBits
     </Footer>
   );
 };

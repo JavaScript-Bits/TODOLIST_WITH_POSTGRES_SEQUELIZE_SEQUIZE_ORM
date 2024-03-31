@@ -1,17 +1,10 @@
-import { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import { Header } from 'antd/es/layout/layout';
-import { Button, Modal } from 'antd';
+import { Button } from 'antd';
+import AddTodo from '../addTodo';
 
-const CustomHeader = () => {
-  const [open, setOpen] = useState(false);
-
-  const showModal = () => {
-    setOpen(true);
-  };
-
-  const handleCancel = () => {
-    setOpen(false);
-  };
+const CustomHeader = ({ open, showModal, handleCancel, onFinish, onFinishFailed, formRef }) => {
   return (
     <Header
       style={{
@@ -25,53 +18,37 @@ const CustomHeader = () => {
       }}
     >
       <div className="demo-logo">
-        <h2>New West</h2>
+        <h2>JS Bits-Todos</h2>
       </div>
       <Button
         style={{
           border: 'none',
           outline: 'none',
+          backgroundColor: '#f5f5f5',
         }}
+        type="text"
         onClick={showModal}
       >
         Add New Todo
       </Button>
-      <Modal
+      <AddTodo
         open={open}
-        centered
-        title="Title"
-        onCancel={handleCancel}
-        footer={[
-          <Button
-            key="back"
-            onClick={handleCancel}
-            style={{
-              backgroundColor: '#cc3406',
-              border: 'none',
-              outline: 'none',
-              color: '#f5f5f5',
-            }}
-          >
-            Cancel
-          </Button>,
-          <Button
-            key="submit"
-            onClick={handleCancel}
-            style={{
-              background: '#001529',
-              border: 'none',
-              outline: 'none',
-              color: '#f5f5f5',
-            }}
-          >
-            Submit
-          </Button>,
-        ]}
-      >
-        <p>Add Some Todos</p>
-      </Modal>
+        handleCancel={handleCancel}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        formRef={formRef}
+      />
     </Header>
   );
+};
+
+CustomHeader.propTypes = {
+  open: PropTypes.bool,
+  showModal: PropTypes.func,
+  handleCancel: PropTypes.func,
+  onFinish: PropTypes.func,
+  onFinishFailed: PropTypes.func,
+  formRef: PropTypes.object,
 };
 
 export default CustomHeader;
